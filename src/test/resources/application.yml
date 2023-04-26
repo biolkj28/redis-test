@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+    database-platform: H2
+    show-sql: false
+
+  h2:
+    console:
+      enabled: true
+      path: /console
+  # 기본값 사용
+  cache:
+    type: redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
